@@ -396,149 +396,212 @@ form .btn2{
     display: block;
 }
 /*brands and newsletter */
-/* <Contact> */
-#contact{
-    background-image: url("pexels-athena-2972890.jpg");
-    background-size: contain;
-    margin: 0;
-    padding: 0;
+/* new contact*/
+
+#contact {
+    background-image: url("NewContactUs.jpg");
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
+    margin-top:10px;
+    box-shadow: 10px 10px 10px 10px black;
+    height:100vh;
 
 }
 
-.contact-info{
-    display: flex;
-    flex-direction: column;
+.contact-container {
+  background-image: url("NewContactUs.jpg");
+  background-size: 50% 50%;
+  background-position: center;
+  position: relative;
+  
 }
-.contact-info span{
-    color: var(--text-color);
+.container {
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  
+}
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-container.details {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-.contact-left{
+.contact-container {
     position: relative;
-    left: 50px;
-    right: 0;
-    margin-top: 20px;
-    line-height: 0.0002;
-    flex-basis: 35%;
-    margin-right: 20px;
-    color: black;
-}
-
-/* .contact-right{
-    position: ;
-    /* left: 50px;
-    right: 0px; */
-    /* margin-top: 20px;
-    line-height: 1;
-    flex-basis: 35%;
-    margin-right: 20px;
-    color: black;
-    top: 0;
-    right: 0;
-    width: 40%;
-} */
-
-.contact-right {right:10px;
-    position: absolute;
-    top: 1630px;
-    right: 0;
-    left: 1450px;
-    transform: translate(-50%);
-    line-height: 1;
-    width: 40%;
-    color: white;
-    flex-basis: 60%;
-}
-
-::placeholder {
-    color: white;
-    opacity: 1; /* Firefox */
   }
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #83b735;
-    margin-right: 10px;
-    font-size: 100px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color: #83b735;
-    transform: translateY(-5px);
-
-}
-.btn.btn1{
-    display:inline-block;
-    position:relative;
-}
-.btn.btn2{
-    display:inline-block;
-    position: absolute;
-    left: -480px;
-    top: 380px;
-    right: 900px;
-    background: #83b735;
-    overflow-x: hidden;
-}
-.contact-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 50%;
-    border:0;
-    outline: none;
-    background: grey;
-    padding: 10px;
-    margin:15px ;
-    color: #fff;
-    font-size: 15px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-/* .copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px ;
-
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-} */
-.copyright {
+  
+  .social-icons {
     position: relative;
-    bottom: -165px;
-    left: 0;
-    width: 100%;
+    top: 300px;
+    left: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    transform: translateX(-50%);
     text-align: center;
-    padding: 25px;
-    background: var(--main-color);
-    font-weight: 300;
-    margin-top: 20px;
+  }
+
+.icon-link {
+  margin: 0 10px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
 }
-.copyright i{
-    color: rgb(255, 255, 255);
+
+  
+.icon-link:hover .fab {
+    color: #83b735; 
 }
-#msg{
-    color: #61b752;
-    margin-top: -30px;
-    display: block;
+.container .content .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+  background-color: rgba(175,175, 182, 0.5);
+}
+.content .left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+  z-index: 1;
+}
+.content .left-side .details {
+  margin: 14px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.content .left-side .details i {
+  font-size: 30px;
+  color: #83b735;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic {
+  font-size: 18px;
+  font-weight: 500;
+  color:#000000;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two {
+  font-size: 14px;
+  color: #032d12;
+}
+
+.container .content .right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #83b735;
+}
+.right-side .input-box {
+  height: 55px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #f0f1f8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box {
+  min-height: 110px;
+}
+.right-side .input-box textarea {
+  padding-top: 6px;
+}
+.right-side .button1 {
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button1 input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #83b735;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button1 input[type="button"] {
+  background: #83b735;
+  width: 150px;
+  height: 40px;
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+    padding: 30px 40px 40px 35px;
+  }
+  .container .content .right-side {
+    width: 75%;
+    margin-left: 55px;
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content {
+    flex-direction: column-reverse;
+  }
+  .container .content .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container .content .left-side::before {
+    display: none;
+  }
+  .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    background-size: 70% 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-container {
+    background-size: 100% 100%;
+  }
 }
 
 /* </Contact> */
