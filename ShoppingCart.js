@@ -10,52 +10,59 @@ openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
 closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');  
+    body.classList.remove('active');
 })
+
 let products = [
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 1,
+        name: 'Wooden Chiar',
+        image: '1.PNG',
+        price: 120000
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 2,
+        name: 'Wooden chair',
+        image: '2.PNG',
+        price: 120000
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 3,
+        name: 'Wooden chair',
+        image: '3.PNG',
+        price: 220000
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 4,
+        name: 'Wooden chair',
+        image: '4.PNG',
+        price: 123000
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 5,
+        name: 'Wooden chair',
+        image: '5.PNG',
+        price: 320000
     },
+    {
+        id: 6,
+        name: 'Wooden chair',
+        image: '6.PNG',
+        price: 120000
+    }
 ];
-let listCards = [];
+let listCards  = [];
 function initApp(){
-    products.forEach((value, key)=>{
+    products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
-        newDiv.classList.add('item')
+        newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="img/${value.image}"/>
+            <img src="image/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>
-            `;
-            list.appendChild(newDiv);
+            <button onclick="addToCard(${key})">Add To Card</button>`;
+        list.appendChild(newDiv);
+
     })
 }
 initApp();
@@ -90,4 +97,13 @@ function reloadCard(){
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
+    }
+    reloadCard();
 }

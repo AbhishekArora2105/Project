@@ -19,7 +19,6 @@ section{
     padding:50px 10%;
 }
 header{
-    position:fixed;
     width: 1005;
     top:0;
     right:0;
@@ -57,7 +56,12 @@ header{
     cursor:pointer;
     display:none;
 }
-
+.shop-container,.new-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
 .box {
     position: relative;
     box-shadow: 1px 4px 4px rgb(0, 0, 0, 0.1);
@@ -105,6 +109,284 @@ header{
     background: #8fc53d;
     transition: 0.5s;
 }
+.title-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.title-price h3 {
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+.box span{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 12px;
+    color: var(--main-color);
+}
+.stars .bx {
+    color: var(--main-color);
+}
+.box .bx-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 7px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 4px 0 4px 0;
+    background: var(--main-color);
+}
+.box .bx-cart:hover {
+    background: #8fc53d;
+
+}
+.new-container .box {
+    border-radius: 4px;
+}
+.new-container .box .box-img{
+    border-radius: 4px;
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.about-img img {
+    width: 80%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.about-text span{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+}
+.brands-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+.brands-container img{
+    width: 100px;
+    filter: grayscale(1);
+
+}
+.brands-container img:hover{
+    width: 100px;
+    filter: grayscale(0);
+
+}
+/* color of our brands partner */
+.heading{
+    color: #000000;
+    margin-left:-130px;
+    size:30px;
+}
+.heading span{
+    color: #83b735;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(newslatterbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.newsletter h2{
+    color:aliceblue;
+}
+.news-box{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.news-box input{
+    width: 260px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: #fff;
+    padding: 10px;
+}
+.news-box .btn{
+    height: 44px;
+    padding: 11px;
+    border-radius: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+}
+.contact-info span{
+    color: var(--text-color);
+}
+.contact-left{
+    margin-top: 10px;
+    line-height: 0.5;
+    flex-basis: 35%;
+}
+.contact-right{
+    line-height: 1;
+    flex-basis: 60%;
+}
+::placeholder {
+    color: #000000;
+    opacity: 1;
+  }
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #83b735;
+    margin-right: 10px;
+    font-size: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #83b735;
+    transform: translateY(-5px);
+
+}
+.btn.btn2{
+    display:inline-block;
+    position: relative;
+    top: 30px;
+    left: 20px;
+    right: 40px;
+    background: #83b735;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 50%;
+    border:0;
+    outline: none;
+    background: grey;
+    padding: 10px;
+    margin:15px ;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: black;
+}
+#msg{
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+}
+
+/* </Contact> */
+@media (max-width:991px){
+    header{
+        padding: 18px 4%; 
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+@media (max-width: 881px){
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .shop-container,.new-container{
+        grid-template-columns: repeat(auto-fit,minmax(218px, auto));
+    }
+}
+@media (max-width: 768px){
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(0 0 0 /10%);
+        transition: 0.2s ease;
+        text-align: center;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+    .navbar a:hover {
+        color: #fff;
+        background: var(--main-color);
+    }
+    .about{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 491px){
+    .home-text h1{
+        font-size: 1.7rem;
+    }
+    .shop-container,
+    .new-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+    .box .box-img{
+        height: 300px;
+    }
+    .new-box input{
+        width: 180px;
+    }
+    .about-text h2{
+        font-size: 1.2rem;
+    }
+}
 /* shop now */
 .shopping1{
     margin-left:10px;
@@ -123,7 +405,7 @@ header{
 .image-wrapper {
     position: relative;
     width: 30%;
-
+    
 }
 
 .image-wrapper:hover .overlay {
@@ -131,13 +413,13 @@ header{
     display:grid;
     grid-template-columns: auto;
     text-align: center;
-
+    
     align-items: center;
 }
 .button{
     width: 100px;
-
-
+    
+    
 }
 .button {
     margin: 0;
@@ -456,10 +738,11 @@ form .btn2{
   
 }
 
+
   
 .icon-link:hover .fab {
-    color: #83b735; 
-}
+    color: #83b735;
+
 .container .content .left-side {
   width: 25%;
   height: 100%;
@@ -541,7 +824,8 @@ form .btn2{
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button1 input[type="button"] {
+
+.right-side .button1 input[type="submit"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -552,7 +836,8 @@ form .btn2{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button1 input[type="button"] {
+
+.button1 input[type="submit"] {
   background: #83b735;
   width: 150px;
   height: 40px;
@@ -607,7 +892,8 @@ form .btn2{
 /* </Contact> */
 @media (max-width:991px){
     header{
-        padding: 18px 4%;
+
+        padding: 18px 4%; 
     }
     section{
         padding: 50px 4%;
@@ -674,4 +960,78 @@ form .btn2{
     .about-text h2{
         font-size: 1.2rem;
     }
+}
+/* Lets Start Shopping*/
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height:100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid grey;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #5d8f12;
 }
