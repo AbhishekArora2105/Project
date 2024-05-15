@@ -16,47 +16,39 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-
-        name: 'Wooden Chair-UMX222',
-        image: 'WoodenChair.PNG',
-        price: 22499
+        name: 'Sleepwell Esteem',
+        image: 'SleepwellEsteem.PNG',
+        price: 38999
     },
     {
         id: 2,
-        name: 'Supreme Cambridge',
-        image: 'Cambridge.PNG',
-        price: 1999
+        name: 'Sleepnight Royale',
+        image: 'SleepnightRoyale.PNG',
+        price: 18999
     },
     {
         id: 3,
-        name: 'Recliner Chair',
-        image: 'Recliner.PNG',
-        price: 25999
+        name: 'Sleepwell Durafirm 2.0',
+        image: 'SleepwellDurafirm.PNG',
+        price: 23999
     },
     {
         id: 4,
-        name: 'Wooden Chair-UMX567',
-        image: '4.PNG',
-        price: 32299
+        name: 'Sleepwell Admire',
+        image: 'SleepwellAdmire.PNG',
+        price: 15499
     },
     {
         id: 5,
-        name: 'Supreme Turbo',
-        image: 'Turbo.PNG',
-        price: 1399
+        name: 'Sleepnight Luxury Plus',
+        image: 'SleepnightLuxury.PNG',
+        price: 24999
     },
     {
         id: 6,
-        name: 'Office Chair',
-        image: 'Office.PNG',
-        price: 17999
-    },
-    {
-        id: 7,
-        name: 'Wooden Chair',
-        image: '1.PNG',
-        price: 1903
-
+        name: 'Sleepwell Durafirm 1.0',
+        image: 'SleepwellDurafirm1.0.PNG',
+        price: 12999
     }
 ];
 let listCards  = [];
@@ -67,10 +59,8 @@ function initApp(){
         newDiv.innerHTML = `
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
-
             <div class="price">&#8377; ${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Add To Cart</button>`;
-
         list.appendChild(newDiv);
     })
 }
