@@ -98,12 +98,13 @@ header{
 .home-text span {
     color: var(--main-color);
 }
-.btn {
+.btn1 {
     padding: 10px 14px;
     background: var(--main-color);
     color: #fff;
     border-radius: 0.3rem;
     font-size: 14px;
+    margin-left: -12px;
 }
 .btn:hover{
     background: #8fc53d;
@@ -175,13 +176,15 @@ header{
 
 }
 .brands-container img{
+    transition: width 0.5s;
     width: 100px;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
 }
 .brands-container img:hover{
-    width: 100px;
-    filter: grayscale(0);
+    width: 150px;
+
+    /* filter: grayscale(0);  */
 
 }
 /* color of our brands partner */
@@ -289,7 +292,7 @@ form input, form textarea{
     background: grey;
     padding: 10px;
     margin:15px ;
-    color: #fff;
+    color: black;
     font-size: 15px;
     border-radius: 6px;
 }
@@ -470,214 +473,8 @@ form .btn2{
 }
 
 /* shop now ends */
-/*brands and newslatter*/
-.title-price{
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-}
-.title-price h3 {
-    font-size: 1rem;
-    font-weight: 600;
 
-}
-.box span{
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding-left: 12px;
-    color: var(--main-color);
-}
-.stars .bx {
-    color: var(--main-color);
-}
-.box .bx-cart{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 7px;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 4px 0 4px 0;
-    background: var(--main-color);
-}
-.box .bx-cart:hover {
-    background: #8fc53d;
 
-}
-.new-container .box {
-    border-radius: 4px;
-}
-.new-container .box .box-img{
-    border-radius: 4px;
-}
-.about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-.about-img img {
-    width: 80%;
-    border-radius: 10px;
-    object-fit: contain;
-}
-.about-text span{
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--main-color);
-
-}
-.brands-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 2rem;
-
-}
-.brands-container img{
-    width: 100px;
-    filter: grayscale(1);
-
-}
-.brands-container img:hover{
-    width: 100px;
-    filter: grayscale(0);
-
-}
-/* color of our brands partner */
-.heading{
-    color: #000000;
-    margin-left:-130px;
-    size:30px;
-}
-.heading span{
-    color: #83b735;
-}
-.newsletter{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.newsletter h2{
-    color:aliceblue;
-}
-.news-box{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-}
-.news-box input{
-    width: 260px;
-    height: 44px;
-    border: none;
-    outline: none;
-    background: #fff;
-    padding: 10px;
-}
-.news-box .btn{
-    height: 44px;
-    padding: 11px;
-    border-radius: 0;
-    font-weight: 500;
-    text-transform: uppercase;
-
-}
-
-.contact-info{
-    display: flex;
-    flex-direction: column;
-}
-.contact-info span{
-    color: var(--text-color);
-}
-.contact-left{
-    margin-top: 10px;
-    line-height: 0.5;
-    flex-basis: 35%;
-}
-.contact-right{
-    line-height: 1;
-    flex-basis: 60%;
-}
-::placeholder {
-    color: #000000;
-    opacity: 1; /* Firefox */
-  }
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #83b735;
-    margin-right: 10px;
-    font-size: 30px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color: #83b735;
-    transform: translateY(-5px);
-
-}
-.btn.btn2{
-    display:inline-block;
-    position: relative;
-    top: 30px;
-    left: 20px;
-    right: 40px;
-    background: #83b735;
-}
-.contact-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 50%;
-    border:0;
-    outline: none;
-    background: grey;
-    padding: 10px;
-    margin:15px ;
-    color: #fff;
-    font-size: 15px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: black;
-}
-#msg{
-    color: #61b752;
-    margin-top: -30px;
-    display: block;
-}
-/*brands and newsletter */
 /* new contact*/
 
 #contact {
@@ -716,6 +513,14 @@ form .btn2{
   margin-bottom: 30px;
 }
 
+/* .social-icons {
+  display: flex;
+  margin-top: 0px;
+  justify-content: center;
+  scroll-margin-bottom: 30px;
+  text-decoration: none;
+  
+} */
 .contact-container {
     position: relative;
   }
@@ -738,11 +543,13 @@ form .btn2{
   
 }
 
-
+/* .icon-link {
+    transition: color 0.2s ease-in-out;
+  } */
   
 .icon-link:hover .fab {
-    color: #83b735;
-
+    color: #83b735; /* or any other color you prefer */
+}
 .container .content .left-side {
   width: 25%;
   height: 100%;
@@ -824,7 +631,6 @@ form .btn2{
   display: inline-block;
   margin-top: 12px;
 }
-
 .right-side .button1 input[type="submit"] {
   color: #fff;
   font-size: 18px;
@@ -836,7 +642,6 @@ form .btn2{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .button1 input[type="submit"] {
   background: #83b735;
   width: 150px;
@@ -892,7 +697,6 @@ form .btn2{
 /* </Contact> */
 @media (max-width:991px){
     header{
-
         padding: 18px 4%; 
     }
     section{
@@ -961,6 +765,8 @@ form .btn2{
         font-size: 1.2rem;
     }
 }
+
+
 /* Lets Start Shopping*/
 #portfolio{
     padding: 50px 0;
