@@ -2,7 +2,7 @@ let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
-let body = document.querySelector('.body');
+let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
@@ -10,58 +10,63 @@ openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
 closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');  
+    body.classList.remove('active');
 })
+
 let products = [
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 1,
+        name: 'Sofa Set',
+        image: 'Sofaset.PNG',
+        price: 189000
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 2,
+        name: 'Curtains',
+        image: 'Curtains.PNG',
+        price: 3799
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 3,
+        name: 'Wooden Chairs',
+        image: 'WoodenChairNA.PNG',
+        price: 24999
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 4,
+        name: 'Beds',
+        image: 'Beds.PNG',
+        price: 26999
     },
     {
-        id : 1,
-        name : 'PRODUCT NAME 1',
-        image : 'pexels-lina-1813502.jpg',
-        price : 30000,
+        id: 5,
+        name: 'Bedsheets',
+        image: 'Bedsheet.PNG',
+        price: 2999
     },
+    {
+        id: 6,
+        name: 'Matresses',
+        image: 'Mattresses.PNG',
+        price: 169000
+    }
 ];
-let listCards = [];
+let listCards  = [];
 function initApp(){
-    products.forEach((value, key)=>{
+    products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
-        newDiv.classList.add('item')
+        newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="img/${value.image}"/>
+            <img src="image/${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>
-            `;
-            list.appendChild(newDiv);
+            <div class="price">&#8377; ${value.price.toLocaleString()}</div>
+            <button onclick="addToCard(${key})">Add To Cart</button>`;
+        list.appendChild(newDiv);
     })
 }
 initApp();
 function addToCard(key){
     if(listCards[key] == null){
-        // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
@@ -90,4 +95,13 @@ function reloadCard(){
     })
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
+    }
+    reloadCard();
 }
