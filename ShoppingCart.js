@@ -47,8 +47,8 @@ let products = [
     {
         id: 6,
         name: 'Trident Comforts',
-        image: 'TridentComfort.PNG',
-        price: 4499
+        image: 'comfort.PNG',
+        price: 50000
     }
 ];
 let listCards  = [];
