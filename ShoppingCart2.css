@@ -1,11 +1,13 @@
 body{
     background-color: #c8e8e9;
     font-family: system-ui;
-    background-image: url("background.avif");
+    background-image: url("output-onlinepngtools.png");
     background-repeat: no-repeat ;
     background-size:cover;
 
 }
+
+
 .container{
     width: 1000px;
     margin: auto;
