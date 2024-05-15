@@ -2,7 +2,7 @@ let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
-let body = document.querySelector('.body');
+let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
@@ -16,39 +16,39 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'Wooden Chiar',
-        image: '1.PNG',
-        price: 120000
+        name: 'Trident Bloom bedsheets',
+        image: 'TridentBedsheet.PNG',
+        price: 2499
     },
     {
         id: 2,
-        name: 'Wooden chair',
-        image: '2.PNG',
-        price: 120000
+        name: 'Trident Flannel blanket',
+        image: 'TridentFlannelBlanket.PNG',
+        price: 5699
     },
     {
         id: 3,
-        name: 'Wooden chair',
-        image: '3.PNG',
-        price: 220000
+        name: 'D Decor Curtains',
+        image: 'DecorCurtain.PNG',
+        price: 2100
     },
     {
         id: 4,
-        name: 'Wooden chair',
-        image: '4.PNG',
-        price: 123000
+        name: 'D Decor Bedsheets',
+        image: 'DecorBedsheet.PNG',
+        price: 1899
     },
     {
         id: 5,
-        name: 'Wooden chair',
-        image: '5.PNG',
-        price: 320000
+        name: 'Trident Towels',
+        image: 'TridentTowel.PNG',
+        price: 699
     },
     {
         id: 6,
-        name: 'Wooden chair',
-        image: '6.PNG',
-        price: 120000
+        name: 'Trident Comforts',
+        image: 'TridentComfort.PNG',
+        price: 4499
     }
 ];
 let listCards  = [];
@@ -59,16 +59,14 @@ function initApp(){
         newDiv.innerHTML = `
             <img src="image/${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <div class="price">&#8377; ${value.price.toLocaleString()}</div>
+            <button onclick="addToCard(${key})">Add To Cart</button>`;
         list.appendChild(newDiv);
-
     })
 }
 initApp();
 function addToCard(key){
     if(listCards[key] == null){
-        // copy product form list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
