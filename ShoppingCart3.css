@@ -4,6 +4,7 @@ body{
     background-image: url("background.avif");
     background-repeat: no-repeat ;
     background-size:cover;
+
 }
 .container{
     width: 1000px;
@@ -66,11 +67,13 @@ header .shopping span{
     padding: 10px;
 }
 .card{
+    
     position: fixed;
     top:0;
     left: 100%;
     width: 500px;
     background-color: #453E3B;
+
     height: 100vh;
     transition: 0.5s;
 }
@@ -132,4 +135,3 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
-
